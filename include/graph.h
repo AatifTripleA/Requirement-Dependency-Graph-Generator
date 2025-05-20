@@ -1,13 +1,13 @@
 #ifndef GRAPH_H
 #define GRAPH_H
 
-// Initializes the requirement dependency graph
-void graph_init(void);
+// Get requirements for dependencies from the markdown file
+void get_requirement(const char *file_name);
 
-// Adds a dependency between two requirements
-void graph_add_dependency(const char *from, const char *to);
+// Generate the graph
+void graph_generator(const char *file_name);
 
-// Frees resources used by the graph
-void graph_free(void);
+// Print the graph
+void print_graph(const char *file_name);
 
 #endif
