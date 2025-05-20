@@ -1,7 +1,11 @@
+#include <stdio.h>
 #include "parse.h"
 #include "graph.h"
 
-// Stub: Parses the given markdown SRS file and extracts requirements
-void parse_srs(const char *filename) {
-    // TODO: Implement parsing logic.
+void parse_srs(const char *file_name) {
+    // Stub
+}
+
+void print_parse(void) {
+    // Stub
 }
