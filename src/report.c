@@ -4,5 +4,5 @@
 
 void report_creation(const char *dependency_req) {
     // Stub
-    // Creates a report using the data for the dependency graph
+    // A report will be created based on the requirement dependencies given
 }
