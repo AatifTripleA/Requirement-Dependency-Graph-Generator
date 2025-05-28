@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include "report.h"
-#include "graph.h"
+#include "../include/report.h"
+#include "../include/graph.h"
 
 extern Requirement requirements[];
 extern int requirement_count;
