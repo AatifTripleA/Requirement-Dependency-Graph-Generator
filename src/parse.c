@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "parse.h"
-#include "graph.h"
+#include "../include/parse.h"
+#include "../include/graph.h"
 
 extern Requirement requirements[];
 extern int requirement_count;
@@ -15,13 +15,17 @@ void parse_srs(const char *file_name) {
     }
 
     char line[256];
+    int line_number = 0;
     while (fgets(line, sizeof(line), file)) {
+        line_number++;
         if (strstr(line, "REQ-")) {
             if (strstr(line, "--")) {
                 sscanf(line, "Line %*d: %s --", requirements[requirement_count].id);
+                printf("%04d: %s --\n", line_number, requirements[requirement_count].id);
             } else if (strstr(line, "->")) {
                 char parent[50], child[50];
                 sscanf(line, "Line %*d: %s -> %s", parent, child);
+                printf("%04d: %s -> %s\n", line_number, parent, child);
 
                 // Find the parent requirement and add the child
                 for (int i = 0; i < requirement_count; i++) {
