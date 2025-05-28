@@ -24,7 +24,7 @@ build/parse.o: ./src/parse.c ./include/parse.h ./include/graph.h
     $(CC) $(CFLAGS) ./src/parse.c -o ./build/parse.o
 
 # Target for report.o
-build/report.o: ./src/report.c ./include/report.h
+build/report.o: ./src/report.c ./include/report.h ./include/graph.h
     $(CC) $(CFLAGS) ./src/report.c -o ./build/report.o
 
 # Target for main.o
