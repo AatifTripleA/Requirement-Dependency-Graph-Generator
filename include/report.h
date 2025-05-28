@@ -1,7 +1,7 @@
 #ifndef REPORT_H
 #define REPORT_H
 
-void report_creation(const char *dependency_req);
-// A report will be created based on the requirement dependencies given
+void report_creation(const char *output_file);
+// Creates a report based on the requirement dependencies.
 
 #endif
