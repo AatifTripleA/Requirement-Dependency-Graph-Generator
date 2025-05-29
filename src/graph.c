@@ -4,9 +4,8 @@
 #include "../include/parse.h"
 #include "../include/graph.h"
 
-// The Requirement structure is used to store a requirement's ID, parent, and children.
-// It is implemented as an array of structures for simplicity and ease of access.
-// The child_count field tracks the number of children for each requirement.
+// The Requirement structure is used to store a requirement's ID, parent, and children. It is implemented as an array of structures for simplicity and ease of access. The child_count field tracks the number of children for each requirement.
+
 typedef struct Requirement {
     char id[50];
     char parent[50];
